@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Maison | AURELIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">AURELIA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Boutique</a></li>
+            <li><a href="about.html" style="color: var(--champagne);">Maison</a></li>
+            <li><a href="contact.html">Concierge</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+            Cart <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <!-- Content injected by JS -->
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn-primary" style="display:block; text-align:center;">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Editorial Content -->
+    <section class="collection fade-in" style="margin-top: 100px;">
+        <h2>The Heritage of AURELIA</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.1rem; color: var(--pure-white);">
+            <p>AURELIA was founded on a singular vision: to redefine modern luxury through uncompromising craftsmanship and architectural silhouettes. We believe that true elegance lies in restraint—in the careful selection of the finest materials and the mastery of subtle details.</p>
+            
+            <p>Every piece in our collection is a testament to the artisan's touch. Our silks are woven in centuries-old Italian mills, while our cashmere is hand-sourced from the highest altitudes to ensure unparalleled softness. We do not design for the season; we design for a lifetime.</p>
+
+            <img src="assets/images/silk_trench.png" alt="Aurelia Craftsmanship" style="width: 100%; height: auto; margin: 3rem 0; filter: grayscale(30%);">
+
+            <p>The AURELIA woman appreciates the power of understatement. She seeks garments that speak softly but leave a lasting impression. From the perfect drape of a velvet gown to the structured minimalism of our signature leather accessories, our creations are designed to elevate the everyday into the extraordinary.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span class="logo">AURELIA</span>
+        <p>&copy; 2026 AURELIA Luxury Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

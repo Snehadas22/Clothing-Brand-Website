@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | AURELIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">AURELIA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Return to Boutique</a></li>
+        </ul>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="form-container fade-in checkout-container">
+        <h2 style="color: var(--champagne); text-align: center; margin-bottom: 2rem;">Secure Checkout</h2>
+        
+        <div style="margin-bottom: 3rem; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 2rem;">
+            <h3 style="margin-bottom: 1rem;">Order Summary</h3>
+            <div id="checkoutCartItems">
+                <!-- Injected by JS, we will just use the cart items already in localStorage -->
+            </div>
+            <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; margin-top: 1rem;">
+                <span>Total Amount</span>
+                <span id="checkoutTotal" style="color: var(--champagne);">$0.00</span>
+            </div>
+        </div>
+
+        <div>
+            <h3 style="margin-bottom: 1rem;">Client Details</h3>
+            <div class="form-group">
+                <label for="checkoutName">Full Name</label>
+                <input type="text" id="checkoutName" required>
+            </div>
+            <div class="form-group">
+                <label for="checkoutEmail">Email Address</label>
+                <input type="email" id="checkoutEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="checkoutCard">Card Details (Simulated)</label>
+                <input type="text" id="checkoutCard" placeholder="**** **** **** ****" value="4111 1111 1111 1111" disabled style="color: #888;">
+            </div>
+            <button id="checkoutBtn" class="btn-primary" style="width: 100%;">Complete Purchase</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span class="logo">AURELIA</span>
+        <p>&copy; 2026 AURELIA Luxury Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Custom script just for checkout summary injection
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkoutItemsContainer = document.getElementById('checkoutCartItems');
+            const checkoutTotal = document.getElementById('checkoutTotal');
+            
+            if (cart.length === 0) {
+                checkoutItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                let total = 0;
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    const el = document.createElement('div');
+                    el.style.display = 'flex';
+                    el.style.justifyContent = 'space-between';
+                    el.style.marginBottom = '0.5rem';
+                    el.innerHTML = `<span>${item.name} (x${item.quantity})</span> <span>$${(item.price * item.quantity).toFixed(2)}</span>`;
+                    checkoutItemsContainer.appendChild(el);
+                });
+                checkoutTotal.textContent = `$${total.toFixed(2)}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concierge | AURELIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">AURELIA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Boutique</a></li>
+            <li><a href="about.html">Maison</a></li>
+            <li><a href="contact.html" style="color: var(--champagne);">Concierge</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+            Cart <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <!-- Content injected by JS -->
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn-primary" style="display:block; text-align:center;">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="form-container fade-in">
+        <h2 style="color: var(--champagne); text-align: center; margin-bottom: 2rem;">Private Inquiry</h2>
+        <p style="text-align: center; margin-bottom: 3rem;">Connect with our concierge team to arrange a private fitting, inquire about bespoke orders, or for any other assistance.</p>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="inquiry_type">Nature of Inquiry</label>
+                <select id="inquiry_type" name="inquiry_type">
+                    <option value="private_fitting">Private Fitting</option>
+                    <option value="bespoke_order">Bespoke Order</option>
+                    <option value="product_details">Product Details</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span class="logo">AURELIA</span>
+        <p>&copy; 2026 AURELIA Luxury Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

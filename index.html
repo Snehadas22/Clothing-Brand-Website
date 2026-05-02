@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Luxury Fashion Boutique</title>
+    <meta name="description" content="Discover the exclusive AURELIA collection of luxury fashion, crafted with pure Italian silk and hand-sourced cashmere.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">AURELIA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Boutique</a></li>
+            <li><a href="about.html">Maison</a></li>
+            <li><a href="contact.html">Concierge</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+            Cart <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn-primary" style="display:block; text-align:center;">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Obsidian Collection</h1>
+            <p>Embrace timeless elegance with our latest curation of architectural silhouettes and unparalleled craftsmanship.</p>
+            <a href="#shop" class="btn-primary">Explore the Collection</a>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="shop" class="collection">
+        <h2 class="fade-in">Curated For You</h2>
+        <div class="product-grid" id="productGrid">
+            <!-- Products injected by JS via FastAPI -->
+        </div>
+    </section>
+
+    <!-- AI Concierge Chat UI -->
+    <div class="chat-fab" id="chatFab">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.58 2 10c0 2.5 1.48 4.75 3.8 6.13L5 20.5c-.13.56.45 1.01.95.76l4.23-2.12C10.76 19.34 11.37 19.5 12 19.5c5.52 0 10-3.58 10-8s-4.48-8-10-8zm0 14c-1.12 0-2.19-.24-3.15-.65l-.34-.14-2.28 1.14.47-2.36-.2-.3C4.85 12.5 4 11.32 4 10c0-3.31 3.58-6 8-6s8 2.69 8 6-3.58 6-8 6z"/></svg>
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>AURELIA Concierge</h3>
+            <button class="close-chat" id="closeChat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages go here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Inquire about a piece...">
+            <button id="sendChat">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span class="logo">AURELIA</span>
+        <p>&copy; 2026 AURELIA Luxury Fashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
