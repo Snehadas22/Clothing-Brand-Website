@@ -2,8 +2,9 @@
 
 ## 📌 About the Project
 
-This is a modern clothing brand website built with the help of AI tools.
-The project focuses on creating a stylish and responsive fashion website with a clean user interface.
+This AI-powered clothing brand website was created as part of a workshop experience.
+Through this project, I explored how AI tools can assist in building modern, responsive web interfaces efficiently.
+
 
 ## 🚀 Features
 
